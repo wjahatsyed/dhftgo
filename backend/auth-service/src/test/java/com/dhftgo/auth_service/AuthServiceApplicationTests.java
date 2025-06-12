@@ -1,4 +1,4 @@
-package com.dhftgo.auth.auth_service;
+package com.dhftgo.auth_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

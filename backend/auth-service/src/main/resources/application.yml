@@ -5,13 +5,16 @@ spring:
   application:
     name: auth-service
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8180/realms/dhftgo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dhftgo_authdb
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+# Logging config
+logging:
+  level:
+    org.springframework.security: DEBUG
